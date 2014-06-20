@@ -2,8 +2,15 @@ var viewers;
 var username = "gamej06";
 var site_url = "http://www.twitch.tv/gamej06/";
 var poll_interval = 3000;
+
 $(document).ready(function() {
     $('#viewers').append(viewers);
+
+    $('.twitch-connect').click(function() {
+    Twitch.login({
+      scope: ['user_read', 'channel_read']
+    });
+  })
 
     setInterval(function(){
         $.ajax({
@@ -20,3 +27,4 @@ $(document).ready(function() {
           });
     }, poll_interval);
 });
+

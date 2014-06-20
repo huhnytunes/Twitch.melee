@@ -1,3 +1,15 @@
+<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+
+<script>
+  Twitch.init({clientId: 'bj5m141z8wu9f9zgjnz6kcscz77ofv'}, function(error, status) {
+    if (status.authenticated) {
+      $('.twitch-connect').hide()
+    }
+  });
+</script>
+
+<img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" class="twitch-connect" href="#" />
+
 <html>
 	<head>
 		<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
@@ -15,11 +27,11 @@ $(document).ready(function() {
         $("#helpbox").css('display','block');
     }
 
-    
+
     streams.push("gamej06");
-    
+
     streams.push("cosmowright");
-    
+
 
     // Setup tabs
     chat_tabs = $("#chatbox").tabs();
@@ -39,18 +51,19 @@ $(window).resize(function() {
 	<body>
 		<p> Twitch </p>
 		<div id="streams">
-    
-    
-    
+
+
+
     <object type="application/x-shockwave-flash" height="255" width="400" id="embed_gamej06" class="stream" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=gamej06" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=gamej06&auto_play=true&start_volume=0" /><param name="wmode" value="opaque" /></object>
-    
-    
-    
-    
-    
+
+
+
+
+
     <object type="application/x-shockwave-flash" height="255" width="400" id="embed_cosmowright" class="stream" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=cosmowright" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=cosmowright&auto_play=true&start_volume=0" /><param name="wmode" value="opaque" /></object>
     </div>
     <span id="viewers">
     </span>
 	</body>
 </html>
+
