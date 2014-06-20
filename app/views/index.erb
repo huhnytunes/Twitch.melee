@@ -1,0 +1,11 @@
+<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+
+<script>
+  Twitch.init({clientId: 'bj5m141z8wu9f9zgjnz6kcscz77ofv'}, function(error, status) {
+    if (status.authenticated) {
+      $('.twitch-connect').hide()
+    }
+  });
+</script>
+
+<img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" class="twitch-connect" href="#" />
